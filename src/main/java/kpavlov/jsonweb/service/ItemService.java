@@ -11,12 +11,20 @@ import java.util.List;
 @Service
 public class ItemService {
 
-
     @Autowired
     private ItemDao itemDao;
 
     @Transactional
     public List<Item> list() {
         return itemDao.list();
+    }
+
+    @Transactional
+    public Item get(int id) {
+        return itemDao.get(id);
+    }
+
+    public Item create() {
+        return new Item("New name", "New description");
     }
 }

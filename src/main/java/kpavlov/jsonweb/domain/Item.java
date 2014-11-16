@@ -2,9 +2,15 @@ package kpavlov.jsonweb.domain;
 
 public class Item {
 
-    long id;
-    String name;
-    String description;
+    private Integer id;
+    private String name;
+    private String description;
+
+    public Item(String name, String description) {
+        this.id = null;
+        this.name = name;
+        this.description = description;
+    }
 
     public Item(int id, String name, String description) {
         this.id = id;
@@ -12,11 +18,11 @@ public class Item {
         this.description = description;
     }
 
-    public long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
